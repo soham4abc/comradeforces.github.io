@@ -578,6 +578,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -602,7 +603,7 @@ var AppModule = /** @class */ (function () {
                 _beds_beds_component__WEBPACK_IMPORTED_MODULE_23__["BedsComponent"],
                 _ambulance_ambulance_component__WEBPACK_IMPORTED_MODULE_24__["AmbulanceComponent"],
                 _vols_vols_component__WEBPACK_IMPORTED_MODULE_25__["VolsComponent"],
-                _donate_donate_component__WEBPACK_IMPORTED_MODULE_26__["DonateComponent"]
+                _donate_donate_component__WEBPACK_IMPORTED_MODULE_26__["DonateComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -610,10 +611,10 @@ var AppModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
                 ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_5__["CollapseModule"].forRoot(),
-                ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrModule"].forRoot()
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrModule"].forRoot(),
             ],
-            providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+            providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_3__["HashLocationStrategy"] }],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
         })
     ], AppModule);
     return AppModule;
